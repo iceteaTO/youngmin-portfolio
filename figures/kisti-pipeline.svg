@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="14">
+  <rect width="960" height="300" fill="#ffffff"/>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1f3a5f"/>
+    </marker>
+  </defs>
+  <style>
+    .box{fill:#ffffff;stroke:#1f3a5f;stroke-width:1.5}
+    .hi{fill:#e8eef5;stroke:#1f3a5f;stroke-width:2}
+    .t{fill:#1f2933}
+    .s{fill:#5b6b7a;font-size:12px}
+    .k{fill:#1f3a5f;font-weight:700}
+    .ln{stroke:#1f3a5f;stroke-width:1.5;fill:none;marker-end:url(#arr)}
+  </style>
+
+  <!-- 1 -->
+  <rect class="box" x="20" y="90" width="150" height="80" rx="6"/>
+  <text class="t" x="95" y="122" text-anchor="middle">사업보고서 PDF</text>
+  <text class="s" x="95" y="144" text-anchor="middle">340여 건, 수백 쪽</text>
+
+  <line class="ln" x1="170" y1="130" x2="200" y2="130"/>
+
+  <!-- 2 -->
+  <rect class="box" x="200" y="90" width="150" height="80" rx="6"/>
+  <text class="t" x="275" y="115" text-anchor="middle">페이지 단위 파싱</text>
+  <text class="s" x="275" y="136" text-anchor="middle">본문 + 표 병합</text>
+  <text class="s" x="275" y="154" text-anchor="middle">페이지당 12,000자 제한</text>
+
+  <line class="ln" x1="350" y1="130" x2="380" y2="130"/>
+
+  <!-- 3 -->
+  <rect class="box" x="380" y="90" width="170" height="80" rx="6"/>
+  <text class="t" x="465" y="115" text-anchor="middle">LLM 함수 호출</text>
+  <text class="s" x="465" y="136" text-anchor="middle">JSON 스키마 강제</text>
+  <text class="s" x="465" y="154" text-anchor="middle">"이 페이지만 근거로"</text>
+
+  <line class="ln" x1="550" y1="130" x2="580" y2="130"/>
+
+  <!-- 4 강조 -->
+  <rect class="hi" x="580" y="70" width="190" height="120" rx="6"/>
+  <text class="k" x="675" y="98" text-anchor="middle">항목마다 근거 필수</text>
+  <text class="s" x="675" y="120" text-anchor="middle">유형 · 제목 · 설명</text>
+  <text class="s" x="675" y="140" text-anchor="middle">근거 인용문(원문 200자 이내)</text>
+  <text class="s" x="675" y="160" text-anchor="middle">쪽 번호</text>
+  <text class="s" x="675" y="180" text-anchor="middle">없으면 빈 결과</text>
+
+  <line class="ln" x1="770" y1="130" x2="800" y2="130"/>
+
+  <!-- 5 -->
+  <rect class="box" x="800" y="90" width="140" height="80" rx="6"/>
+  <text class="t" x="870" y="115" text-anchor="middle">기업별 csv / json</text>
+  <text class="s" x="870" y="136" text-anchor="middle">→ PostgreSQL 적재</text>
+  <text class="s" x="870" y="154" text-anchor="middle">→ 연구팀 분석</text>
+
+  <!-- 하단 주석 -->
+  <text class="s" x="480" y="235" text-anchor="middle">연구자는 인용문을 원문과 대조해 즉시 검증 · 500쪽 보고서 1건 처리 15~25분 · 외부 전송 불가 문서는 같은 구조로 로컬 LLM 경로 병행</text>
+  <text class="s" x="480" y="262" text-anchor="middle">실패한 페이지는 빈 결과로 넘기고 배치를 멈추지 않음</text>
+</svg>

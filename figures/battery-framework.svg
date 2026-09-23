@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320" font-family="Pretendard, 'Apple SD Gothic Neo', sans-serif" font-size="14">
+  <rect width="960" height="320" fill="#ffffff"/>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1f3a5f"/>
+    </marker>
+  </defs>
+  <style>
+    .box{fill:#ffffff;stroke:#1f3a5f;stroke-width:1.5}
+    .hi{fill:#e8eef5;stroke:#1f3a5f;stroke-width:2}
+    .t{fill:#1f2933}
+    .s{fill:#5b6b7a;font-size:12px}
+    .k{fill:#1f3a5f;font-weight:700}
+    .ln{stroke:#1f3a5f;stroke-width:1.5;fill:none;marker-end:url(#arr)}
+    .back{stroke:#1f3a5f;stroke-width:1.5;fill:none;stroke-dasharray:6 4;marker-end:url(#arr)}
+  </style>
+
+  <!-- 1 데이터 -->
+  <rect class="box" x="20" y="90" width="170" height="100" rx="6"/>
+  <text class="t" x="105" y="116" text-anchor="middle">문헌·실험 데이터 약 500건</text>
+  <text class="s" x="105" y="138" text-anchor="middle">조성: Ni, Co, Mn, Li 몰비</text>
+  <text class="s" x="105" y="156" text-anchor="middle">공정: 소결 온도, 유지 시간</text>
+  <text class="s" x="105" y="176" text-anchor="middle">단위 보정 · 결측 · 이상치 처리</text>
+
+  <line class="ln" x1="190" y1="140" x2="220" y2="140"/>
+
+  <!-- 2 모델 -->
+  <rect class="box" x="220" y="90" width="170" height="100" rx="6"/>
+  <text class="t" x="305" y="116" text-anchor="middle">XGBoost 회귀</text>
+  <text class="s" x="305" y="138" text-anchor="middle">초기 방전용량</text>
+  <text class="s" x="305" y="156" text-anchor="middle">100사이클 용량유지율</text>
+  <text class="s" x="305" y="176" text-anchor="middle">5겹 교차검증 · R² 약 0.82</text>
+
+  <line class="ln" x1="390" y1="140" x2="420" y2="140"/>
+
+  <!-- 3 해석 강조 -->
+  <rect class="hi" x="420" y="75" width="200" height="130" rx="6"/>
+  <text class="k" x="520" y="102" text-anchor="middle">SHAP으로 원인 인자 해석</text>
+  <text class="s" x="520" y="128" text-anchor="middle">2단계 소결 온도 720~740℃</text>
+  <text class="s" x="520" y="146" text-anchor="middle">Li 비율 1.05~1.10</text>
+  <text class="s" x="520" y="170" text-anchor="middle">두 구간이 성능에 양의 기여</text>
+  <text class="s" x="520" y="190" text-anchor="middle">예측값이 아니라 이유를 남김</text>
+
+  <line class="ln" x1="620" y1="140" x2="650" y2="140"/>
+
+  <!-- 4 합성 -->
+  <rect class="box" x="650" y="90" width="140" height="100" rx="6"/>
+  <text class="t" x="720" y="116" text-anchor="middle">합성 데이터</text>
+  <text class="s" x="720" y="138" text-anchor="middle">해석된 구간 안에서</text>
+  <text class="s" x="720" y="156" text-anchor="middle">조합 10만 건 생성</text>
+  <text class="s" x="720" y="176" text-anchor="middle">학습 모델로 성능 추정</text>
+
+  <line class="ln" x1="790" y1="140" x2="820" y2="140"/>
+
+  <!-- 5 후보 -->
+  <rect class="box" x="820" y="90" width="120" height="100" rx="6"/>
+  <text class="t" x="880" y="122" text-anchor="middle">미탐색 후보</text>
+  <text class="s" x="880" y="144" text-anchor="middle">용량·유지율 동시</text>
+  <text class="s" x="880" y="162" text-anchor="middle">상위 5% 조합</text>
+
+  <!-- 되돌림 화살표 -->
+  <path class="back" d="M880,190 L880,250 L105,250 L105,192"/>
+  <text class="s" x="492" y="272" text-anchor="middle">후보를 실험으로 검증해 데이터에 되돌림 (해석 → 설계 → 실험의 순환)</text>
+  <text class="s" x="480" y="300" text-anchor="middle">한계: 데이터가 희소한 경계 구간은 예측 편차가 큼 → 밀도 가중·불확실성 정량화가 다음 과제</text>
+</svg>
