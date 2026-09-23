@@ -1,6 +1,7 @@
 /* 서체 파일은 build/fonts/ (git 제외). build_pdf.py가 없으면 내려받고 @font-face 경로를 채운다 */
 @font-face { font-family: "Noto Sans KR"; font-weight: 400; src: url("FONTDIR/NotoSansCJKkr-Regular.otf") format("opentype"); }
 @font-face { font-family: "Noto Sans KR"; font-weight: 700; src: url("FONTDIR/NotoSansCJKkr-Bold.otf") format("opentype"); }
+@font-face { font-family: "Noto Serif KR"; font-weight: 400; src: url("FONTDIR/NotoSerifCJKkr-Regular.otf") format("opentype"); }
 @font-face { font-family: "Noto Serif KR"; font-weight: 700; src: url("FONTDIR/NotoSerifCJKkr-Bold.otf") format("opentype"); }
 /* 서체: 제목 명조(Noto Serif KR), 본문 고딕(Noto Sans KR). 색: 먹색 본문 + 짙은 남색 하나 */
 @page { size: A4; margin: 20mm 18mm; }
@@ -22,7 +23,7 @@ table { border-collapse: collapse; width: 100%; margin: 6pt 0 10pt 0; font-size:
 th, td { border: 0; border-top: 0.5pt solid #c8ccd2; padding: 4pt 6pt; vertical-align: top; text-align: left; }
 th { border-top: 1pt solid #0f2540; border-bottom: 1pt solid #0f2540; color: #0f2540; font-weight: 700; background: none; }
 tr:last-child td { border-bottom: 1pt solid #0f2540; }
-img { width: 92%; display: block; margin: 6pt auto 0 auto; }
+img { width: 100%; display: block; margin: 10pt auto 4pt auto; }
 em { font-style: normal; color: #5a6270; font-size: 9pt; }
 a { color: #0f2540; text-decoration: none; border-bottom: 0.5pt solid #9aa3ad; }
 ul { margin: 0 0 8pt 0; padding-left: 16pt; }
@@ -32,5 +33,7 @@ td a { border-bottom: 0; }
 .cover td { padding-top: 3.5pt; padding-bottom: 3.5pt; }
 /* 제목 두 단: h1은 짧은 이름, 바로 뒤 h2는 부제(한 줄 설명). 괘선은 부제 아래로 */
 h1:has(+ h2) { border-bottom: 0; padding-bottom: 0; margin-bottom: 3pt; }
-h1 + h2 { font-family: "Noto Sans KR", sans-serif; font-weight: 400; font-size: 12pt; color: #3a4452; line-height: 1.5; margin: 0 0 12pt 0; padding-bottom: 8pt; border-bottom: 1.5pt solid #0f2540; }
+h1 + h2 { font-family: "Noto Serif KR", serif; font-weight: 400; font-size: 12.5pt; color: #0f2540; line-height: 1.5; margin: 0 0 16pt 0; padding-bottom: 10pt; border-bottom: 1.5pt solid #0f2540; }
 .cover h1 { font-size: 26pt; }
+.cover h1 + h2 { margin-bottom: 12pt; padding-bottom: 8pt; }
+.cover h2 { margin-top: 12pt; }

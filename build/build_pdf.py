@@ -22,7 +22,8 @@ for i, f in enumerate(files):
 
 FONTS = {"NotoSansCJKkr-Regular.otf": "Sans/OTF/Korean/NotoSansCJKkr-Regular.otf",
          "NotoSansCJKkr-Bold.otf": "Sans/OTF/Korean/NotoSansCJKkr-Bold.otf",
-         "NotoSerifCJKkr-Bold.otf": "Serif/OTF/Korean/NotoSerifCJKkr-Bold.otf"}
+         "NotoSerifCJKkr-Bold.otf": "Serif/OTF/Korean/NotoSerifCJKkr-Bold.otf",
+         "NotoSerifCJKkr-Regular.otf": "Serif/OTF/Korean/NotoSerifCJKkr-Regular.otf"}
 font_dir = os.path.join(ROOT, "build", "fonts")
 os.makedirs(font_dir, exist_ok=True)
 for name, path in FONTS.items():
