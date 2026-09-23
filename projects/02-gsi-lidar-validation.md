@@ -22,4 +22,4 @@
 
 **한계와 향후 과제** 기준선 20건은 현장 장면의 일부라 새 유형의 오탐은 사후에 추가됩니다. 기준선 확장과 라벨 없는 장면의 이상 탐지가 다음 과제입니다.
 
-**역할 및 기술** 분류·검증 모듈, 회귀 테스트, CI 게이트 주도. 런타임 추적은 참여. 2026.03~현재. Python, NumPy, pytest, GitHub Actions, Claude Code, Cursor. 코드는 회사 저장소로 비공개.
+**역할 및 기술** 분류·검증 모듈, 회귀 테스트, CI 게이트 주도. 런타임 추적 모듈은 참여. 2026.03~현재. Python, NumPy, pytest, GitHub Actions, Claude Code, Cursor. 코드는 회사 저장소로 비공개.

@@ -2,7 +2,7 @@
 
 ## AI 모델을 현장이 믿고 쓰는 서비스로 완성하는 엔지니어
 
-LLM 문서 추출, 24시간 운영 인식 시스템의 검증 체계, 해석 가능한 기계학습 연구. 세 프로젝트 모두 결과마다 근거를 남겨 사람이 검증할 수 있도록 설계했습니다.
+세 프로젝트 모두 모델의 결과마다 근거를 남겨 사람이 검증할 수 있도록 설계했습니다.
 
 ## 프로젝트
 
@@ -26,4 +26,4 @@ LLM 문서 추출, 24시간 운영 인식 시스템의 검증 체계, 해석 가
 
 ## 기술 스택
 
-Python, PyTorch, scikit-learn, XGBoost, SHAP, OpenAI API, Ollama, PostgreSQL, Docker, GitHub Actions, pytest, FastAPI, React
+Python, PyTorch, scikit-learn, XGBoost, SHAP, OpenAI API, Ollama, pdfplumber, PostgreSQL, Docker, GitHub Actions, pytest
