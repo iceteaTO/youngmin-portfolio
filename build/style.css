@@ -30,3 +30,7 @@ li { margin-bottom: 2pt; }
 .foot { font-size: 8.5pt; color: #5a6270; position: absolute; left: 0; right: 0; bottom: 0; margin: 0; padding-top: 6pt; border-top: 0.5pt solid #c8ccd2; display: flex; justify-content: space-between; }
 td a { border-bottom: 0; }
 .cover td { padding-top: 3.5pt; padding-bottom: 3.5pt; }
+/* 제목 두 단: h1은 짧은 이름, 바로 뒤 h2는 부제(한 줄 설명). 괘선은 부제 아래로 */
+h1:has(+ h2) { border-bottom: 0; padding-bottom: 0; margin-bottom: 3pt; }
+h1 + h2 { font-family: "Noto Sans KR", sans-serif; font-weight: 400; font-size: 12pt; color: #3a4452; line-height: 1.5; margin: 0 0 12pt 0; padding-bottom: 8pt; border-bottom: 1.5pt solid #0f2540; }
+.cover h1 { font-size: 26pt; }

@@ -15,7 +15,7 @@ for i, f in enumerate(files):
     md = md.replace("](projects/", "](file://" + os.path.join(ROOT, "projects") + "/")
     html = markdown.markdown(md, extensions=["tables"])
     # 한 section = 한 쪽. 프로젝트 쪽은 머리에 번호, 모든 쪽 아래에 쪽번호
-    kicker = f'<p class="kicker">프로젝트 {i} / {n_proj}</p>' if i else ""
+    kicker = f'<p class="kicker">프로젝트 {i} / {n_proj}</p>' if i else '<p class="kicker">포트폴리오</p>'
     foot = f'<p class="foot"><span>김영민 포트폴리오 · 2026.09</span><span>{i + 1} / {len(files)}</span></p>'
     cls = "project" if i else "cover"
     sections.append(f'<section class="{cls}">{kicker}{html}{foot}</section>')
