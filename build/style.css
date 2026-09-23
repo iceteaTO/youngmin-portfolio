@@ -4,22 +4,29 @@
 @font-face { font-family: "Noto Serif KR"; font-weight: 700; src: url("FONTDIR/NotoSerifCJKkr-Bold.otf") format("opentype"); }
 /* 서체: 제목 명조(Noto Serif KR), 본문 고딕(Noto Sans KR). 색: 먹색 본문 + 짙은 남색 하나 */
 @page { size: A4; margin: 20mm 18mm; }
-html { font-family: "Noto Sans KR", "Apple SD Gothic Neo", sans-serif; color: #1a1a1a; font-size: 10.5pt; line-height: 1.6; }
+html { font-family: "Noto Sans KR", "Apple SD Gothic Neo", sans-serif; color: #1a1a1a; font-size: 10.5pt; line-height: 1.55; word-break: keep-all; overflow-wrap: break-word; }
 body { margin: 0; }
-section { page-break-after: always; }
+/* 한 section이 한 쪽을 꽉 채우고 꼬리말을 바닥에 붙인다 (A4 297mm - 상하 여백 40mm) */
+section { page-break-after: always; box-sizing: border-box; height: 256mm; position: relative; }
 section:last-child { page-break-after: auto; }
+.kicker { font-size: 9pt; color: #5a6270; letter-spacing: 0.08em; margin: 0 0 6pt 0; }
+.project th:nth-child(1) { width: 24%; }
+.project th:nth-child(2) { width: 48%; }
+.cover th:nth-child(1) { width: 18%; }
+.cover th:nth-child(5) { width: 19%; }
 h1 { font-family: "Noto Serif KR", serif; font-size: 20pt; color: #0f2540; line-height: 1.35; margin: 0 0 12pt 0; padding-bottom: 8pt; border-bottom: 1.5pt solid #0f2540; font-weight: 700; letter-spacing: -0.01em; }
-h2 { font-family: "Noto Serif KR", serif; font-size: 13pt; color: #0f2540; margin: 18pt 0 6pt 0; padding-bottom: 3pt; border-bottom: 0.5pt solid #c8ccd2; font-weight: 700; }
+h2 { font-family: "Noto Serif KR", serif; font-size: 13pt; color: #0f2540; margin: 14pt 0 6pt 0; padding-bottom: 3pt; border-bottom: 0.5pt solid #c8ccd2; font-weight: 700; }
 p { margin: 0 0 8pt 0; }
 strong { color: #0f2540; font-weight: 700; }
 table { border-collapse: collapse; width: 100%; margin: 6pt 0 10pt 0; font-size: 9.5pt; line-height: 1.5; }
-th, td { border: 0; border-top: 0.5pt solid #c8ccd2; padding: 5pt 6pt; vertical-align: top; text-align: left; }
+th, td { border: 0; border-top: 0.5pt solid #c8ccd2; padding: 4pt 6pt; vertical-align: top; text-align: left; }
 th { border-top: 1pt solid #0f2540; border-bottom: 1pt solid #0f2540; color: #0f2540; font-weight: 700; background: none; }
 tr:last-child td { border-bottom: 1pt solid #0f2540; }
-img { width: 100%; display: block; margin: 8pt 0 2pt 0; }
+img { width: 92%; display: block; margin: 6pt auto 0 auto; }
 em { font-style: normal; color: #5a6270; font-size: 9pt; }
 a { color: #0f2540; text-decoration: none; border-bottom: 0.5pt solid #9aa3ad; }
 ul { margin: 0 0 8pt 0; padding-left: 16pt; }
 li { margin-bottom: 2pt; }
-.foot { font-size: 8.5pt; color: #5a6270; margin-top: 16pt; padding-top: 6pt; border-top: 0.5pt solid #c8ccd2; }
+.foot { font-size: 8.5pt; color: #5a6270; position: absolute; left: 0; right: 0; bottom: 0; margin: 0; padding-top: 6pt; border-top: 0.5pt solid #c8ccd2; display: flex; justify-content: space-between; }
 td a { border-bottom: 0; }
+.cover td { padding-top: 3.5pt; padding-bottom: 3.5pt; }

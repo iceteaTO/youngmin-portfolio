@@ -8,14 +8,17 @@ CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 files = [os.path.join(ROOT, "README.md")] + sorted(glob.glob(os.path.join(ROOT, "projects", "*.md")))
 sections = []
-for f in files:
+n_proj = len(files) - 1
+for i, f in enumerate(files):
     md = open(f, encoding="utf-8").read()
     md = md.replace("](../figures/", "](file://" + os.path.join(ROOT, "figures") + "/")
     md = md.replace("](projects/", "](file://" + os.path.join(ROOT, "projects") + "/")
     html = markdown.markdown(md, extensions=["tables"])
-    sections.append(f"<section>{html}</section>")
-# 꼬리말은 마지막 section 안에 넣어야 별도 쪽으로 밀리지 않는다
-sections[-1] = sections[-1].replace("</section>", '<p class="foot">김영민 포트폴리오 · 2026.09</p></section>')
+    # 한 section = 한 쪽. 프로젝트 쪽은 머리에 번호, 모든 쪽 아래에 쪽번호
+    kicker = f'<p class="kicker">프로젝트 {i} / {n_proj}</p>' if i else ""
+    foot = f'<p class="foot"><span>김영민 포트폴리오 · 2026.09</span><span>{i + 1} / {len(files)}</span></p>'
+    cls = "project" if i else "cover"
+    sections.append(f'<section class="{cls}">{kicker}{html}{foot}</section>')
 
 FONTS = {"NotoSansCJKkr-Regular.otf": "Sans/OTF/Korean/NotoSansCJKkr-Regular.otf",
          "NotoSansCJKkr-Bold.otf": "Sans/OTF/Korean/NotoSansCJKkr-Bold.otf",
