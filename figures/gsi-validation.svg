@@ -40,5 +40,5 @@
 
   <rect class="box" x="790" y="80" width="150" height="80" rx="2"/>
   <text class="t" x="865" y="114" text-anchor="middle">병합, 24시간 운영</text>
-  <text class="s" x="865" y="136" text-anchor="middle">6개월간 PR 95건</text>
+  <text class="s" x="865" y="136" text-anchor="middle">성능 후퇴 없는 변경만</text>
 </svg>
